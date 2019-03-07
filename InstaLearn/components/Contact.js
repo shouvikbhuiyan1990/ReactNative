@@ -1,0 +1,61 @@
+import React from 'React';
+import {
+    View, 
+    Text, 
+    StyleSheet, 
+    TouchableHighlight,
+    Image
+} from 'react-native';
+import Icon from 'react-native-vector-icons/Ionicons';
+
+const Contact = ({item, onPress}) => {
+    const fullName= `${item.name.first} ${item.name.last}`;
+    return(
+        <TouchableHighlight
+        >
+            <View style={styles.row}>
+                <Image
+                    style={styles.thumbnail}
+                    source={{uri: item.picture.thumbnail}}
+                />
+                <View>
+                    <Text>
+                        {fullName}
+                    </Text>
+                    <Text>
+                        {item.email}
+                    </Text>
+                </View>
+                <View style={styles.iconContainer}>
+                    <Icon 
+                        name="ios-arrow-forward"
+                        size={25}
+                        style={styles.icon}
+                    />
+                </View>
+            </View>
+        </TouchableHighlight>
+    )
+}
+
+export default Contact;
+
+const styles = StyleSheet.create({
+    row: {
+        flexDirection: 'row',
+        paddingHorizontal: 15,
+        paddingVertical: 10,
+        flex: 1
+    },
+    thumbnail: {
+        width: 40,
+        height: 40,
+        borderRadius: 20
+    },
+    iconContainer: {
+        flex: 1
+    },
+    icon: {
+        alignSelf: 'flex-end'
+    }
+})
