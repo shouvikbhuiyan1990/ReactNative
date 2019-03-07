@@ -12,6 +12,8 @@ const Contact = ({item, onPress}) => {
     const fullName= `${item.name.first} ${item.name.last}`;
     return(
         <TouchableHighlight
+            onPress={onPress}
+            underlayColor={'rgba(154, 154, 154, 0.25)'}
         >
             <View style={styles.row}>
                 <Image

@@ -11,6 +11,7 @@ const Contact = ({item, onPress}) => {
     const fullName= `${item.name.first} ${item.name.last}`;
     return(
         <TouchableHighlight
+            onPress={onPress}
         >
             <View style={styles.row}>
                 <Image

@@ -1,25 +1,11 @@
 import React, {Component} from 'react';
 import {Platform, StyleSheet, Text, View} from 'react-native';
 
-import NewContact  from './components/NewContact';
-
-const instructions = Platform.select({
-  ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
-  android:
-    'Double tap R on your keyboard to reload,\n' +
-    'Shake or press menu button for dev menu',
-});
+import { ContactsStack }  from './config/router';
+import {createAppContainer} from 'react-navigation';
 
 type Props = {};
-export default class App extends Component<Props> {
-  render() {
-    return (
-      <View style={styles.container}>
-        <NewContact />
-      </View>
-    );
-  }
-}
+export default createAppContainer(ContactsStack);
 
 const styles = StyleSheet.create({
   container: {
