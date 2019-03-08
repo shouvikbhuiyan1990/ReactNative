@@ -3,6 +3,7 @@ import {ScrollView, StyleSheet} from 'react-native';
 
 import Header from '../components/Header';
 import Actions from '../components/Actions';
+import Info from '../components/Info';
 
 class Details extends React.Component {
     render() {
@@ -10,7 +11,8 @@ class Details extends React.Component {
         return (
             <ScrollView style={styles.container}>
                 <Header {...item} />
-                <Actions {...item}/>
+                <Actions {...item} />
+                <Info {...item} />
             </ScrollView>
         )
     }

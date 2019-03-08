@@ -1,9 +1,30 @@
 import React from 'react';
 import { Text, View, Image, StyleSheet } from 'react-native';
 
-export default (  ) => (
+import Row from './Row';
+
+export default ( { dob, registered, login:{username}, location:{city} } ) => (
     <View style={styles.container}>
-        <Text>Info</Text>
+        <Row
+        style={styles.container}
+        label="city"
+        body={city}
+        />
+        <Row
+        style={styles.container}
+        label="username"
+        body={username}
+        />
+        <Row
+        style={styles.container}
+        label="date of birth"
+        body={dob}
+        />
+        <Row
+        style={styles.container}
+        label="date of registration"
+        body={registered}
+        />
     </View>
 );
 
@@ -15,7 +36,6 @@ const styles = StyleSheet.create({
         borderRadius: 80
     },
     container: {
-        flex: 1,
-        alignItems: 'center'
+        paddingHorizontal: 25
     }
 });
