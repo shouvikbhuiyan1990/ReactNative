@@ -5,20 +5,24 @@ import Contact from './Contact';
 import { contacts } from '../Data';
 
 class NewContact extends React.Component {
+    constructor(props) {
+        super(props);
+        this.handlePress = this.handlePress.bind(this);
+    }
     render() {
         return (
             <View style={styles.container}>
                 <FlatList 
                 data={contacts}
-                renderItem={({item}) => <View><Contact item={item} onPress={this.handlePress} /></View>}
+                renderItem={({item}) => <View><Contact item={item} onPress={()=>this.handlePress(item)} /></View>}
                 keyExtractor={(item) => item.email}
                 />
             </View>
         )
     }
 
-    handlePress() {
-        return null;
+    handlePress( item ) {
+        this.props.navigation.navigate('Details', item);
     }
 }
 

@@ -2,10 +2,10 @@ import React from 'react';
 import { Platform } from 'react-native';
 import { TabNavigator, createStackNavigator, DrawerNavigator } from 'react-navigation';
 
-import Contact from '../components/Contact';
-import NewContact from '../components/NewContact';
-import Me from '../components/Me';
-import Details from '../components/Details';
+import Contact from '../screens/Contact';
+import NewContact from '../screens/NewContact';
+import Me from '../screens/Me';
+import Details from '../screens/Details';
 
 
 

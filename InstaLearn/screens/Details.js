@@ -1,11 +1,14 @@
 import React from 'React';
 import {View, Text, StyleSheet} from 'react-native';
 
+import Header from '../components/Header';
+
 class Details extends React.Component {
     render() {
         return (
             <View style={styles.container}>
-                <Text>NewContact Text</Text>
+                <Text>{JSON.stringify(this.props.navigation.state.params)}</Text>
+                <Header />
             </View>
         )
     }
