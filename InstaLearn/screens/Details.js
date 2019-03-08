@@ -5,10 +5,10 @@ import Header from '../components/Header';
 
 class Details extends React.Component {
     render() {
+        const item = this.props.navigation.state.params;
         return (
             <View style={styles.container}>
-                <Text>{JSON.stringify(this.props.navigation.state.params)}</Text>
-                <Header />
+                <Header {...item} />
             </View>
         )
     }
@@ -18,8 +18,6 @@ export default Details;
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
+        flex: 1
     }
 })

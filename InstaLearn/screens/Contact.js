@@ -7,9 +7,10 @@ import {
     Image
 } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
+import {Capitalize} from '../Helper/capitalize';
 
 const Contact = ({item, onPress}) => {
-    const fullName= `${item.name.first} ${item.name.last}`;
+    const fullName= `${Capitalize(item.name.first)} ${Capitalize(item.name.last)}`;
     return(
         <TouchableHighlight
             onPress={onPress}

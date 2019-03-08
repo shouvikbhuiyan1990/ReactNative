@@ -7,6 +7,7 @@ import NewContact from '../screens/NewContact';
 import Me from '../screens/Me';
 import Details from '../screens/Details';
 
+import {Capitalize} from '../Helper/capitalize';
 
 
 export const ContactsStack = createStackNavigator({
@@ -18,8 +19,8 @@ export const ContactsStack = createStackNavigator({
     },
     Details: {
         screen: Details,
-        navigationOptions: ( ) => ({
-            title: 'Details'
+        navigationOptions: ({ navigation } ) => ({
+            title: `${Capitalize(navigation.state.params.name.first)} ${Capitalize(navigation.state.params.name.last)}`
         })
     },
 });
