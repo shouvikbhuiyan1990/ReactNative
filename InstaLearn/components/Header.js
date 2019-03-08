@@ -1,6 +1,7 @@
 import React from 'react';
 import { Text, View, Image, StyleSheet, Dimensions } from 'react-native';
 import {Capitalize} from '../Helper/capitalize';
+import Color from '../config/colors';
 
 const window = Dimensions.get('window');
 
@@ -10,7 +11,7 @@ export default ( { picture, name } ) => (
         style={styles.thumbnail}
         source={{uri:picture.large }}
         />
-        <Text>{ `${Capitalize(name.first)} ${Capitalize(name.last)}` }</Text>
+        <Text style={styles.primaryText}>{ `${Capitalize(name.first)} ${Capitalize(name.last)}` }</Text>
     </View>
 );
 
@@ -25,5 +26,9 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         paddingVertical: 25,
         marginBottom: 20
+    },
+    primaryText: {
+        fontSize: 22,
+        color: Color.primaryText
     }
 });

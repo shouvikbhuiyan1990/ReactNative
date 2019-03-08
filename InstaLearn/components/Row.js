@@ -8,8 +8,8 @@ import Color from '../config/colors';
 export default ( {label, body, actions}  ) => (
     <View style={styles.container}>
         <View>
-            <Text>{label}</Text>
-            <Text>{body}</Text>
+            <Text style={styles.subtleText}>{label}</Text>
+            <Text style={styles.primaryText}>{body}</Text>
         </View>
         <View style={styles.actionsContainer}>
             {
@@ -43,5 +43,13 @@ const styles = StyleSheet.create({
     },
     actionsContainer: {
         flexDirection: 'row'
+    },
+    primaryText: {
+        fontSize: 20,
+        color: Color.primaryText
+    },
+    subtleText: {
+        fontSize: 18,
+        color: Color.subtleText
     }
 });

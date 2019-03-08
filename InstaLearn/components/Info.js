@@ -2,6 +2,7 @@ import React from 'react';
 import { Text, View, Image, StyleSheet } from 'react-native';
 
 import Row from './Row';
+import moment from 'moment';
 
 export default ( { dob, registered, login:{username}, location:{city} } ) => (
     <View style={styles.container}>
@@ -18,12 +19,12 @@ export default ( { dob, registered, login:{username}, location:{city} } ) => (
         <Row
         style={styles.container}
         label="date of birth"
-        body={dob}
+        body={moment(dob).format('MMMM Do, YYYY')}
         />
         <Row
         style={styles.container}
         label="date of registration"
-        body={registered}
+        body={moment(registered).format('MMMM Do, YYYY')}
         />
     </View>
 );
