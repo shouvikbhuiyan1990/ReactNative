@@ -1,21 +1,53 @@
 import React from 'react';
-import { Text, View, Image, StyleSheet } from 'react-native';
+import { View, StyleSheet } from 'react-native';
 
-export default (  ) => (
+import Row from './Row';
+import Color from '../config/colors';
+
+export default ( {email, phone, cell} ) => (
     <View style={styles.container}>
-        <Text>Action</Text>
+        <Row
+        style={styles.container}
+        label="email"
+        body={email}
+        actions={
+            [
+                {onPress : ()=> null, iosIcon: 'ios-mail', androidIcon: 'md-mail'}
+            ]
+        }
+        />
+        <Row
+        style={styles.container}
+        label="cell"
+        body={cell}
+        actions={
+            [
+                {onPress : ()=> null, iosIcon: 'ios-call', androidIcon: 'md-call'}
+            ]
+        }
+        />
+        <Row
+        style={styles.container}
+        label="phone"
+        body={phone}
+        actions={
+            [
+                {onPress : ()=> null, iosIcon: 'ios-megaphone', androidIcon: 'md-landline'}
+            ]
+        }
+        />
     </View>
 );
 
 
 const styles = StyleSheet.create({
-    thumbnail: {
-        width: 160,
-        height: 160,
-        borderRadius: 80
-    },
     container: {
-        flex: 1,
-        alignItems: 'center'
+        backgroundColor: Color.grayBackground,
+        paddingHorizontal: 20,
+        paddingVertical: 20,
+        borderTopWidth: StyleSheet.hairlineWidth,
+        borderTopColor: Color.border,
+        borderBottomWidth: StyleSheet.hairlineWidth,
+        borderBottomColor: Color.border,
     }
 });

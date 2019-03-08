@@ -20,7 +20,6 @@ const styles = StyleSheet.create({
         borderRadius: 80
     },
     container: {
-        flex: 1,
         alignItems: 'center'
     }
 });
