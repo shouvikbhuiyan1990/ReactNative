@@ -1,6 +1,8 @@
 import React from 'react';
-import { Text, View, Image, StyleSheet } from 'react-native';
+import { Text, View, Image, StyleSheet, Dimensions } from 'react-native';
 import {Capitalize} from '../Helper/capitalize';
+
+const window = Dimensions.get('window');
 
 export default ( { picture, name } ) => (
     <View style={styles.container}>
@@ -15,11 +17,13 @@ export default ( { picture, name } ) => (
 
 const styles = StyleSheet.create({
     thumbnail: {
-        width: 160,
-        height: 160,
-        borderRadius: 80
+        width: window.width / 2,
+        height: window.width / 2,
+        borderRadius: window.width / 4
     },
     container: {
-        alignItems: 'center'
+        alignItems: 'center',
+        paddingVertical: 25,
+        marginBottom: 20
     }
 });
