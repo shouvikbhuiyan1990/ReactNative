@@ -22,7 +22,8 @@ export default ( {email, phone, cell} ) => (
         body={cell}
         actions={
             [
-                {onPress : ()=> null, iosIcon: 'ios-call', androidIcon: 'md-call'}
+                {onPress : ()=> null, iosIcon: 'ios-call', androidIcon: 'md-call'},
+                {onPress : ()=> null, iosIcon: 'ios-text', androidIcon: 'md-text'}
             ]
         }
         />
@@ -32,7 +33,7 @@ export default ( {email, phone, cell} ) => (
         body={phone}
         actions={
             [
-                {onPress : ()=> null, iosIcon: 'ios-megaphone', androidIcon: 'md-landline'}
+                {onPress : ()=> null, iosIcon: 'ios-call', androidIcon: 'md-call'}
             ]
         }
         />

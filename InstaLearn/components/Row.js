@@ -11,7 +11,7 @@ export default ( {label, body, actions}  ) => (
             <Text>{label}</Text>
             <Text>{body}</Text>
         </View>
-        <View>
+        <View style={styles.actionsContainer}>
             {
                 actions && actions.map((action, index)=>(
                     <TouchableOpacity
@@ -38,6 +38,10 @@ const styles = StyleSheet.create({
         paddingVertical: 10,
     },
     icon: {
-        color: Color.link
+        color: Color.link,
+        paddingHorizontal: 5
+    },
+    actionsContainer: {
+        flexDirection: 'row'
     }
 });
