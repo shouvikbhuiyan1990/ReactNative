@@ -1,11 +1,11 @@
 import React, {Component} from 'react';
 import {Platform, StyleSheet, Text, View} from 'react-native';
 
-import { ContactsStack }  from './config/router';
+import { AppTabNavigator }  from './config/router';
 import {createAppContainer} from 'react-navigation';
 
 type Props = {};
-export default createAppContainer(ContactsStack);
+export default createAppContainer(AppTabNavigator);
 
 const styles = StyleSheet.create({
   container: {

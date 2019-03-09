@@ -5,7 +5,7 @@ class Me extends React.Component {
     render() {
         return (
             <View style={styles.container}>
-                <Text>NewContact Text</Text>
+                <Text>Me Text</Text>
             </View>
         )
     }
